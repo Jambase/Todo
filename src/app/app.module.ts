@@ -1,3 +1,5 @@
+import { Todo } from './../service/todo.service';
+import { ComponentsModule } from './../components/components.module';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -21,6 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
+    ComponentsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -34,6 +37,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    Todo,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
